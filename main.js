@@ -18,7 +18,6 @@ function getUserData2() {
         var statusOnSubs = ""
 
         table = document.getElementById('dataTable')
-        console.log(data.length)
         for (let index = 0; index < data.length; index++) {
             tableRowE = document.createElement('tr')
             name = document.createElement('td')
@@ -91,7 +90,6 @@ function getUserData() {
         tableRowE.append(plan)
         tableRowE.append(status)
     })
-    console.log(tempdata)
 }
 
 function setData() { 
@@ -154,4 +152,18 @@ function createPieChart(id, data, labels, title){
             }
         },
     })
+}
+
+window.addEventListener('load', () => {
+    registerSW();
+  });
+
+async function registerSW() {
+    if ('serviceWorker' in navigator) {
+        try {
+        await navigator.serviceWorker.register('./sw.js');
+        } catch (e) {
+        console.log(`SW registration failed`);
+        }
+    }
 }
