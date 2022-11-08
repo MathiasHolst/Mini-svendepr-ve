@@ -26,8 +26,8 @@ form.addEventListener('submit', (e) => {
     if (messages.length > 0) {
         e.preventDefault()
         errorElement.innerText = messages.join(', ')
-        localStorage.setItem("loggedIn", false)
+        sessionStorage.setItem("loggedIn", false)
     } else {
-        localStorage.setItem("loggedIn", true)
+        sessionStorage.setItem("loggedIn", true)
     }
 })
