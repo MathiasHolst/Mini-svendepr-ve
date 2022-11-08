@@ -11,7 +11,7 @@ const name = document.getElementById('name')
 const password = document.getElementById('password')
 const form = document.getElementById('form')
 const errorElement = document.getElementById('error')
-localStorage.setItem("loggedIn", false)
+sessionStorage.setItem("loggedIn", false)
 
 form.addEventListener('submit', (e) => {
     let messages = []

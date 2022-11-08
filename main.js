@@ -5,7 +5,7 @@ if(sessionStorage.getItem("loggedIn") == "true") {
     getUserData2()
 } 
 else if (sessionStorage.getItem("loggedIn") == "false" || sessionStorage.getItem("loggedIn") == null) {
-    window.location.replace("http://127.0.0.1:5500/index.html")
+    window.location.replace("http://mathiasholst.github.io/Mini-svendepr-ve/index.html")
 }
 
 function getUserData2() {
